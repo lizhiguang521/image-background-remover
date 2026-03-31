@@ -1,0 +1,53 @@
+{
+  "server": {
+    "port": 3000,
+    "host": "localhost",
+    "env": "development"
+  },
+  "upload": {
+    "maxSize": 25,
+    "allowedTypes": ["image/jpeg", "image/jpg", "image/png", "image/webp"],
+    "maxFiles": 10
+  },
+  "api": {
+    "removeBg": {
+      "enabled": true,
+      "apiKey": "",
+      "timeout": 30000,
+      "retryAttempts": 3
+    },
+    "stableDiffusion": {
+      "enabled": false,
+      "modelPath": "",
+      "gpu": false
+    }
+  },
+  "security": {
+    "rateLimit": {
+      "windowMs": 900000,
+      "max": 100
+    },
+    "jwt": {
+      "secret": "your_jwt_secret_here",
+      "expiresIn": "7d"
+    }
+  },
+  "database": {
+    "type": "sqlite",
+    "path": "./database.sqlite"
+  },
+  "logging": {
+    "level": "info",
+    "file": "logs/app.log"
+  },
+  "cdn": {
+    "enabled": false,
+    "url": ""
+  },
+  "features": {
+    "batchProcessing": true,
+    "userManagement": false,
+    "subscription": false,
+    "apiKeys": false
+  }
+}
